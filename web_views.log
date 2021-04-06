@@ -1,0 +1,8 @@
+Date, Operation, Path, User, Status Code
+2019-02-02T18:83:03 GET /some/webpage.html ted 200
+2019-02-02T18:83:03 GET /some/otherpage.html ted 200
+2019-02-02T18:83:03 GET /some/otherwebpage.html sue 200
+2019-02-02T18:83:03 GET /some/third.html josh 404
+2019-02-03T18:83:03 GET /some/webpage.html ted 200
+2019-02-04T18:83:03 GET /some/webpage.html ted 200
+2019-02-04T18:83:03 GET /some/webpage.html ted 200
