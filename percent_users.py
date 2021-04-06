@@ -1,3 +1,15 @@
+"""# Given a log file containing two days of web server logs,
+# find the percentage of users who visited the site on
+# both days. The log file contains the following
+# columns, separated by spaces.
+
+# Date, Operation, Path, User, Status Code
+# 2019-02-02T18:83:03 GET /some/webpage.html ted 200
+# 2019-02-02T18:83:03 GET /some/otherpage.html ted 200
+# 2019-02-02T18:83:03 GET /some/otherwebpage.html sue 200
+# 2019-02-02T18:83:03 GET /some/third.html josh 404
+"""
+
 from __future__ import division
 
 with open('web_views.log','r') as log_file:
