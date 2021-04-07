@@ -8,6 +8,7 @@ Constraints:
 [input] string ip
 [output] boolean"""
 
+
 def check_ip(ip_address):
 	split_values = ip_address.split('.')
 	if len(split_values) != 4:
