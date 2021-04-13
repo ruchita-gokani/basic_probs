@@ -12,24 +12,29 @@ Output: false
 
 
 def word_pattern(pattern, s):
-    pattern_list = list(pattern)  # ['a', 'b', 'b', 'a']
-    s_list = s.split(' ')  # ['dog', 'cat', 'cat', 'dog']
-    word_dict = {}
-    if len(pattern_list) != len(s_list):
+    s_list = s.split(' ')
+    p_dict = {}
+    s_dict = {}
+    if len(pattern) != len(s_list):
         return False
-    else:
-        for i in range(len(pattern_list)):
-            try:
-                word_dict[pattern_list[i]] = word_dict[pattern_list[i]] + [(s_list[i])]
-            except KeyError:
-                word_dict[pattern_list[i]] = [s_list[i]]
+    for i in range(len(pattern)):
+        try:
+            p_dict[pattern[i]] = p_dict[pattern[i]] + [(s_list[i])]
+        except KeyError:
+            p_dict[pattern[i]] = [s_list[i]]
+    for i in range(len(s_list)):
+        try:
+            s_dict[s_list[i]] = s_dict[s_list[i]] + [(pattern[i])]
+        except KeyError:
+            s_dict[s_list[i]] = [pattern[i]]
 
-        for key, value in word_dict.items():
-            if len(set(value)) != 1:
-                return False
-            else:
-                continue
-        return True
+    for value in p_dict.values():
+        if len(set(value)) != 1:
+            return False
+    for value in s_dict.values():
+        if len(set(value)) != 1:
+            return False
+    return True
 
 
 if __name__ == '__main__':
@@ -38,4 +43,4 @@ if __name__ == '__main__':
     if word_pattern(input_pattern, input_string):
         print("Pattern matches string")
     else:
-        print("Pattern does not match string")
+        print("Pattern does not match")
