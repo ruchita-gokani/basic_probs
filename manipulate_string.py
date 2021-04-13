@@ -5,14 +5,16 @@ stuffing them back into a string when finished. ('The dog walks' becomes..... 'e
 
 def reverse_string(test_string, delimiter):
     test_list = test_string.split(delimiter)
-    jumbled_list = []
     for word in test_list:
         new_word = ''
         for i in range(len(word)):
             new_word = new_word + word[len(word)-1-i]
-        jumbled_list.append(new_word)
+        if test_list[0] == word:
+            string = new_word
+        else:
+            string = string + delimiter + new_word
 
-    return delimiter.join(jumbled_list)
+    return string
 
 
 if __name__ == '__main__':
