@@ -45,7 +45,6 @@ def thresh_monitor(column_number, repetitions, threshold):
 			return passing_message
 
 
-
 def main():
 	"""Get arguments and pass them to thresh_monitor function"""
 	if len(sys.argv) > 3:
@@ -55,6 +54,6 @@ def main():
 		s2 = input('Enter repetitions: ')
 		s3 = input('Enter threshold: ')
 	column_number, repetitions, threshold = int(s1), int(s2), int(s3)
-	print thresh_monitor(column_number, repetitions, threshold)
+	print(thresh_monitor(column_number, repetitions, threshold))
 
 main()
