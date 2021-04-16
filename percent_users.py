@@ -12,7 +12,7 @@
 
 from __future__ import division
 
-with open('web_views.log','r') as log_file:
+with open('usage_files/web_views.log', 'r') as log_file:
 	line1 = log_file.readline()
 	log_content = log_file.read()
 	line = log_content.split('\n')

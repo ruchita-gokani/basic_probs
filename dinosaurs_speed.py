@@ -18,14 +18,14 @@ from collections import OrderedDict
 speed_dict = dict()
 g = 9.8
 dataset_info = dict()
-with open('dataset1.csv', 'r') as dataset1:
+with open('usage_files/dataset1.csv', 'r') as dataset1:
     next(dataset1)
     for line in dataset1:
         name = line.split(',')[0]
         leg_length = line.split(',')[1]
         dataset_info[name] = leg_length
 
-with open('dataset2.csv', 'r') as dataset2:
+with open('usage_files/dataset2.csv', 'r') as dataset2:
     next(dataset2)
     for line in dataset2:
         stance = line.split(',')[2]

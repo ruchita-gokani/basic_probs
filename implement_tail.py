@@ -19,4 +19,4 @@ def tail(filename, l, n=None):
         print(f.read())
 
 
-tail('vm_stat.log', 8, n=2)
+tail('usage_files/vm_stat.log', 8, n=2)

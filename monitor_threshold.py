@@ -26,7 +26,7 @@ import sys
 def thresh_monitor(column_number, repetitions, threshold):
 	exceeds_message = "The recommended threshold has been exceeded"
 	passing_message = "The numbers are within the limits of threshold"
-	with open('vm_stat.log', 'r') as vm_stat:
+	with open('usage_files/vm_stat.log', 'r') as vm_stat:
 		log_file = vm_stat.read()
 		lines = log_file.split('\n')
 		count = 0
