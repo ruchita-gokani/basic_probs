@@ -15,7 +15,7 @@ import re
 
 def check_process_count(host_range, process, lim):
     pattern = re.compile(r'([a-zA-Z.]+)([0-9-]+)([a-zA-Z.]+)')
-    matches = pattern.match(host_range)
+    matches = pattern.finditer(host_range)
     num, hname, dname = '', '', ''
     for match in matches:
         num = match.group(2)

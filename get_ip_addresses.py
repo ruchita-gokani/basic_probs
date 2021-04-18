@@ -12,7 +12,9 @@ def getIPaddress(hostname):
 
     command = ["ssh", hostname, "ifconfig", "|", "grep", "inet"]
     r = subprocess.run(command, capture_output=True, text=True)
-    pattern = re.compile(r'(?:inet)+\s([0-9]{1,3}\.){3}[0-9]{1,3}')
+    # without using re: ifconfig -a | grep 'inet' | awk '{print $2}'
+    pattern = re.compile(r'(?:inet)+\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})')
+    # pattern = re.compile(r'(?:inet)+\s([0-9]{1,3}\.{3}[0-9]{1,3})')
     matches = pattern.finditer(str(r.stdout))
     for match in matches:
         print(match.group(0))
