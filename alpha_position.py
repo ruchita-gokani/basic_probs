@@ -15,7 +15,7 @@ def alphabet_position(text):
         else:
             continue
     num_list = ' '.join(map(str, num_list))
-    print (num_list)
+    print(num_list)
 
 
 def main():

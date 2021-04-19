@@ -24,4 +24,4 @@ def check_ip(ip_address):
 		return True
 	
 
-print check_ip("0.168.123.45")
+print(check_ip("0.168.123.45"))

@@ -28,4 +28,4 @@ def duplicate_char(problem_string):
 
 if __name__ == '__main__':
     string = input('Enter a random string of characters to get the first duplicate: ')
-    print duplicate_char(string)
+    print(duplicate_char(string))

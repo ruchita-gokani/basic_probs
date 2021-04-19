@@ -22,13 +22,13 @@ people_string = """
 
 data = json.loads(people_string)
 for person in data['people']:
-    print person['name']
-print data['people']
-print data
+    print(person['name'])
+print(data['people'])
+print(data)
 
 # remove phone number from each person
 for person in data['people']:
     del person['phone']
 
 new_string = json.dumps(data, indent=2)
-print new_string 
+print(new_string)
