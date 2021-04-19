@@ -29,4 +29,4 @@ with open('usage_files/web_views.log', 'r') as log_file:
 	common_users = len(set.intersection(*values))
 	total_users = len(set.union(*values))
 	percent_users = common_users/total_users*100
-	print my_dict, values, percent_users
+	print(my_dict, values, percent_users)
