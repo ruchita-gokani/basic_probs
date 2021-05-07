@@ -11,6 +11,8 @@ The game ends when both players have made all possible substrings.
 Scoring
 A player gets +1 point for each occurrence of the substring in the string S.
 https://www.hackerrank.com/challenges/the-minion-game/problem"""
+
+
 def minion_game(string): #BANANA
     k = 0
     s = 0

@@ -5,8 +5,9 @@ Return the running sum of nums.
 https://leetcode.com/problems/running-sum-of-1d-array/
 """
 
+
 class Solution(object):
-    def runningSum(self, nums):
+    def running_sum(self, nums):
         """
         :type nums: List[int]
         :rtype: List[int]
@@ -22,4 +23,4 @@ class Solution(object):
 if __name__ == '__main__':
     test_inp = input()
     result = Solution()
-    print(result.runningSum(test_inp))
+    print(result.running_sum(test_inp))
